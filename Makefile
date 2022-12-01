@@ -1,4 +1,4 @@
-PRGM = RegFile
+PRGM = RAM
 
 CC = iverilog
 FLAGS = -Wall -Winfloop

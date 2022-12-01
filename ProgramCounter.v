@@ -1,8 +1,11 @@
-module ProgramCounter(input count, input[3:0] incrament, output reg[31:0] step);
-    initial begin
-        step <= 32'b0;
+module ProgramCounter(
+    input inc, 
+    input PcSel, 
+    input[31:0] step, 
+    output reg[31:0] count);
+    always @(posedge inc) begin
+        if (~PcSel) count <= count + 4;
+        else count <= count + step;
     end
-    always @(posedge count) begin
-        step <= step + incrament;
-    end
+    
 endmodule

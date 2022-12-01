@@ -25,19 +25,19 @@ module ALU_tb();
         $dumpfile("build/ALU.vcd");
         $dumpvars(0, ALU_tb);
         clk <= 0;
-        #10;
+        #15;
         A <= 9;
         B <= 10;
         AluOp <= `ADD;
-        #10;
+        #15;
         AluOp <= `SUB;
-        #10;
+        #15;
         A <= 10;
-        #10;
+        #15;
         A <= 1;
         B <= 1;
         AluOp <= `AND;
-        #15;
+        #20;
         $stop;
     end
 

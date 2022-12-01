@@ -1,4 +1,12 @@
-module CU(input clk, input[31:0] instr, output reg RF_Read, output reg imm_sel, output reg b_sel, output reg[4:0] ALU_Op);
+module CU(
+    input clk, 
+    input[31:0] instr, 
+    output reg PcSel, 
+    output reg RegWEn, 
+    output reg ImmSel, 
+    output reg BSel, 
+    output reg ASel, 
+    output reg[3:0] AluOp);
     always @(posedge clk) begin
         case (instr[6:0])
             7'b0110011: // R-Type instructions
@@ -15,5 +23,17 @@ module CU(input clk, input[31:0] instr, output reg RF_Read, output reg imm_sel, 
                 ALU_OP <= 5'b00000;
             7'b1100011: // Branch instructions
         endcase
+    end
+endmodule
+
+module ImmSE (
+    input[11:0] imm,
+    output reg[31:0] op
+);
+    always @(imm) begin
+        if (imm[11])
+            op <= {21'b1_1111_1111_1111_1111_1111, imm[10:0]};
+        else
+            op <= {21'b0, imm[10:0]};
     end
 endmodule

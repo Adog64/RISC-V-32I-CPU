@@ -1,0 +1,224 @@
+$date
+	Thu Nov 10 19:00:47 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module RAM_tb $end
+$var wire 32 ! data_out [31:0] $end
+$var reg 11 " addr [10:0] $end
+$var reg 1 # clk $end
+$var reg 32 $ data_in [31:0] $end
+$var reg 1 % rst $end
+$var reg 1 & write_en $end
+$scope module ram $end
+$var wire 11 ' addr [10:0] $end
+$var wire 1 # clk $end
+$var wire 32 ( din [31:0] $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var wire 8 ) en_sel [7:0] $end
+$var reg 32 * dout [31:0] $end
+$scope module decoder $end
+$var wire 3 + select [2:0] $end
+$var reg 8 , one_hot [7:0] $end
+$upscope $end
+$scope module mem0 $end
+$var wire 8 - addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 . din [31:0] $end
+$var wire 1 / enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 0 dout [31:0] $end
+$var integer 32 1 i [31:0] $end
+$upscope $end
+$scope module mem1 $end
+$var wire 8 2 addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 3 din [31:0] $end
+$var wire 1 4 enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 5 dout [31:0] $end
+$var integer 32 6 i [31:0] $end
+$upscope $end
+$scope module mem2 $end
+$var wire 8 7 addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 8 din [31:0] $end
+$var wire 1 9 enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 : dout [31:0] $end
+$var integer 32 ; i [31:0] $end
+$upscope $end
+$scope module mem3 $end
+$var wire 8 < addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 = din [31:0] $end
+$var wire 1 > enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 ? dout [31:0] $end
+$var integer 32 @ i [31:0] $end
+$upscope $end
+$scope module mem4 $end
+$var wire 8 A addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 B din [31:0] $end
+$var wire 1 C enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 D dout [31:0] $end
+$var integer 32 E i [31:0] $end
+$upscope $end
+$scope module mem5 $end
+$var wire 8 F addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 G din [31:0] $end
+$var wire 1 H enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 I dout [31:0] $end
+$var integer 32 J i [31:0] $end
+$upscope $end
+$scope module mem6 $end
+$var wire 8 K addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 L din [31:0] $end
+$var wire 1 M enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 N dout [31:0] $end
+$var integer 32 O i [31:0] $end
+$upscope $end
+$scope module mem7 $end
+$var wire 8 P addr [7:0] $end
+$var wire 1 # clk $end
+$var wire 32 Q din [31:0] $end
+$var wire 1 R enable $end
+$var wire 1 % rst $end
+$var wire 1 & write_en $end
+$var reg 32 S dout [31:0] $end
+$var integer 32 T i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx T
+bx S
+xR
+bx Q
+bx P
+bx O
+bx N
+xM
+bx L
+bx K
+bx J
+bx I
+xH
+bx G
+bx F
+bx E
+bx D
+xC
+bx B
+bx A
+bx @
+bx ?
+x>
+bx =
+bx <
+bx ;
+bx :
+x9
+bx 8
+bx 7
+bx 6
+bx 5
+x4
+bx 3
+bx 2
+bx 1
+bx 0
+x/
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+x&
+1%
+bx $
+0#
+bx "
+bx !
+$end
+#5000
+b100000000 1
+b100000000 6
+b100000000 ;
+b100000000 @
+b100000000 E
+b100000000 J
+b100000000 O
+b100000000 T
+1#
+#10000
+0R
+0M
+0H
+1C
+0>
+09
+04
+0/
+b10000 )
+b10000 ,
+b101 -
+b101 2
+b101 7
+b101 <
+b101 A
+b101 F
+b101 K
+b101 P
+b100 +
+0#
+b101 $
+b101 (
+b101 .
+b101 3
+b101 8
+b101 =
+b101 B
+b101 G
+b101 L
+b101 Q
+b10000000101 "
+b10000000101 '
+1&
+0%
+#15000
+1#
+#20000
+0#
+0&
+#25000
+b101 !
+b101 *
+b101 D
+1#
+#30000
+0#
+#35000
