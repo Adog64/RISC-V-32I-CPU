@@ -1,4 +1,4 @@
-PRGM = RAM
+PRGM = CPU_tb
 
 CC = iverilog
 FLAGS = -Wall -Winfloop

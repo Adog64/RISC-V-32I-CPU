@@ -20,8 +20,8 @@ module CU(
 
     reg[4:0] state;
     reg[11:0] immGrab;
-    reg immSel
-    ImmSE ImmSE(.imm(immGrab), .immSel(immSel), .extdImm(Imm));
+    reg immSel;
+    ImmSE immSE(.imm(immGrab), .immSel(immSel), .extdImm(Imm));
 
     initial begin
         state <= 5'b00001;
@@ -118,7 +118,7 @@ endmodule
 
 module ImmSE (
     input[11:0] imm,
-    input immSel
+    input immSel,
     output reg[31:0] extdImm
 );
     always @(imm) begin

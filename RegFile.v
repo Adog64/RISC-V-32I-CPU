@@ -24,7 +24,7 @@
 // endmodule
 
 module RegFile(clk, rst, rd, rs1, rs2, data_in, read, rs1_out, rs2_out);
-    input clk, rst, read;
+    input clk, rst, write;
     input[4:0] rd, rs1, rs2;
     input[31:0] data_in;
 
@@ -39,7 +39,7 @@ module RegFile(clk, rst, rd, rs1, rs2, data_in, read, rs1_out, rs2_out);
                 memory[i] = 0;
         end
         else begin
-            if (read) begin
+            if (!write) begin
                 rs1_out = memory[rs1];
                 rs2_out = memory[rs2];
             end

@@ -63,7 +63,7 @@ endmodule
 module RAM (
     input clk,
     input rst,
-    input[10:0] addr,
+    input[31:0] addr,
     input[31:0] din,
     input write_en,
     output reg[31:0] dout,

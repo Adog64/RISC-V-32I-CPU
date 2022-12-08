@@ -1,6 +1,6 @@
-module ALU(input clk, input [31:0]A, input [31:0]B, input [3:0]op, output reg[31:0] result, output[4:0] status);
+module ALU(input [31:0]A, input [31:0]B, input [3:0]op, output reg[31:0] result, output[4:0] status);
     ALU_status stat(result, status);
-    always @(posedge clk) begin
+    always @(op or A or B) begin
         case (op)
             4'b0000:    // ADD
                 result <= A + B;
